@@ -19,3 +19,34 @@ docker run -p <HOST_IP>:<CONTAINER_EXPOSED_IP> -d <ContainerID/ContainerName> : 
 
 To attach again to the container
 docker attach container_id/containerName
+
+docker logs container_id
+
+docker run -i -t (or -it : interactive and tty) <ContainerId>
+
+docker start -a -i <containerId>
+
+docker images
+
+docker rmi <ImageID>
+
+docker image prune : Deletes any non-referrenced images
+
+docker container prune : Deletes Stopped containers
+
+docker run -p <host_ip>:<container:ip> --rm <imageId> : --rm to automatically delete a container once it's stopped or exited
+
+docker image inspect <imageId> : to analyzethe image and it's layers info
+
+docker cp <containerId> sourceFolderFromHost <containerId>:<DestinationLocationIntoContainer> : if destination folder/location does not exists then will be created by default
+
+also Files can be copied from docker container to localhost file system too using same docker cp command
+
+docker image prune -a : To remove images inclusive of tagged images
+
+docker build -t <NameOfRepository>:<Tag#> : To create docker image with specific repo and tag
+
+docker run -p <HostIP>:<ContainerIP> -d --rm --name <ContainerName> <ImageID> or <ImageName>:<Tag>
+
+
+docker tag <OldImageName>:<Tag> <DockerHubAccountName>/<NewImageName>:<Tag> 
