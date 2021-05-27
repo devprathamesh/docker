@@ -1,0 +1,21 @@
+docker build .
+
+docker run -p HOST_IP:CONTAINER_EXPOSED_IP
+
+docker ps : To List Running Container Instances
+
+docker ps -a : To List All the Containers(Running/Stopped)
+
+docker images
+
+Stopping and Restarting images
+
+docker start container_name/container_id
+
+docker start : Starts container in default dettached mode
+docker run : Starts container in default attached mode
+
+docker run -p <HOST_IP>:<CONTAINER_EXPOSED_IP> -d <ContainerID/ContainerName> : to run the container in dettached mode
+
+To attach again to the container
+docker attach container_id/containerName
