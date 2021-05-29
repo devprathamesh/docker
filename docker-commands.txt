@@ -48,5 +48,8 @@ docker build -t <NameOfRepository>:<Tag#> : To create docker image with specific
 
 docker run -p <HostIP>:<ContainerIP> -d --rm --name <ContainerName> <ImageID> or <ImageName>:<Tag>
 
+docker tag <OldImageName>:<Tag> <DockerHubAccountName>/<NewImageName>:<Tag>
 
-docker tag <OldImageName>:<Tag> <DockerHubAccountName>/<NewImageName>:<Tag> 
+docker volume rm <volume_name> or docker volume prune
+
+docker history <ImageId>
